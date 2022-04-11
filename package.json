@@ -1,0 +1,24 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "First experience using Express.js and Heroku to create a web server for a database of animals.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrj-sys/zookeepr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrj-sys/zookeepr/issues"
+  },
+  "homepage": "https://github.com/jrj-sys/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
