@@ -1,4 +1,3 @@
-const { create } = require('domain');
 const express = require('express');
 const { animals } = require('./data/animals.json');
 const fs = require('fs');
@@ -12,6 +11,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+// serve static files 
+app.use(express.static('client'));
 
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
@@ -101,6 +102,22 @@ app.get('/api/animals/:id', (req, res) => {
       } else {
         res.sendStatus(404);
     }
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname,'./client/index.html'));
+});
+
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/animals.html'))
+});
+
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/zookeepers.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/index.html'));
 });
 
 app.post('/api/animals', (req, res) => {

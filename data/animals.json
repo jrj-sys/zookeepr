@@ -144,6 +144,27 @@
         "hungry"
       ],
       "id": "14"
+    },
+    {
+      "name": "Larry",
+      "species": "Lemur",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "zany",
+        "anxious"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Ellie",
+      "species": "Elephant",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious"
+      ],
+      "id": "16"
     }
   ]
 }
